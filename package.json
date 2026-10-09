@@ -1,0 +1,58 @@
+{
+  "name": "ks-forex-trading-journal",
+  "productName": "KS FOREX TRADING JOURNAL",
+  "version": "1.0.0",
+  "description": "KS FOREX TRADING JOURNAL - journal de trading Forex (Windows)",
+  "main": "main.js",
+  "author": "KS",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis --publish never"
+  },
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.ks.forextradingjournal",
+    "productName": "KS FOREX TRADING JOURNAL",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "styles.css",
+      "app.js",
+      "calc.js",
+      "charts.js",
+      "i18n.js",
+      "refdata.js",
+      "icon.png",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "KS FOREX TRADING JOURNAL",
+      "artifactName": "KS FOREX TRADING JOURNAL Setup ${version}.${ext}"
+    }
+  }
+}

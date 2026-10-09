@@ -1,0 +1,35 @@
+KS FOREX TRADING JOURNAL — comment obtenir le Setup (.exe)
+==========================================================
+
+Le Setup se compile automatiquement sur GitHub (gratuit), comme pour tes autres logiciels.
+
+1) Crée un NOUVEAU dépôt GitHub (ex. : ks-forex-trading-journal).
+   Ne mélange pas avec le dépôt de ton autre logiciel.
+
+2) Dézippe ce dossier, puis sur GitHub : Add file > Upload files.
+   Envoie les 12 fichiers de la racine :
+   app.js, calc.js, charts.js, i18n.js, refdata.js, index.html, styles.css,
+   main.js, preload.js, package.json, icon.png, build.yml
+   puis Commit changes.
+
+3) Crée le fichier de compilation : Add file > Create new file.
+   Dans le nom du fichier, tape exactement :   .github/workflows/build.yml
+   (les "/" créent les dossiers automatiquement)
+   Colle dedans tout le contenu du fichier build.yml, puis Commit changes.
+
+4) Onglet "Actions" : attends que la compilation devienne verte (3 à 6 minutes).
+   Clique dessus, descends jusqu'à "Artifacts", télécharge
+   KS-FOREX-TRADING-JOURNAL-Setup, dézippe-le : tu obtiens
+   "KS FOREX TRADING JOURNAL Setup 1.0.0.exe".
+
+5) Double-clique sur le Setup pour installer. Raccourcis bureau et menu Démarrer.
+
+Utilisation
+-----------
+- Journal des trades : "Ajouter un trade" (ou double-clic sur une ligne pour modifier).
+- Un trade n'est compté dans les statistiques que s'il a une date de clôture ET un prix de sortie.
+- Frais : à saisir en négatif (comme dans l'Excel).
+- Dépôt / retrait : type IN / OUT, date + montant.
+- Langue : boutons FR | EN en haut (ou menu Langue). Devise : onglet Paramètres.
+- Données : enregistrées automatiquement sur l'ordinateur (dossier AppData\Roaming\KS FOREX TRADING JOURNAL).
+- Sauvegarde : menu Fichier > Sauvegarder une copie. Export / import CSV (ouvrable dans Excel).
